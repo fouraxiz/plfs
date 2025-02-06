@@ -1,37 +1,194 @@
 <!DOCTYPE html>
-
 <html lang="en-US" class="no-js">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <title>PLFS &#8211; Financial &amp; People's Leasing and Financial Services Limited</title>
 
+    <!-- Original CSS links -->
     <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all'>
     <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all'>
     <link rel='stylesheet' href='css/financity-style-custom.css' type='text/css' media='all'>
     <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all'>
     <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%7CAsap%3Aregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic&#038;subset=latin-ext%2Clatin%2Cvietnamese%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Ccyrillic&#038;ver=4.9.5' type='text/css' media='all'>
+    <!-- Google Fonts -->
+    <link rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700'
+          type='text/css'
+          media='all'>
+
+    <!-- Custom Styling for an Eye-Catching Design -->
     <style>
-        .step { display: none; }
-        .step.active { display: block; }
-        .progress-bar { transition: width 0.4s ease; }
+        /* -------- BODY BACKGROUND (Subtle Gradient) -------- */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(120deg, #e6f1f5 0%, #ffffff 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* -------- CONTAINER: White Card w/ Shadow -------- */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            max-width: 900px;
+        }
+
+        /* -------- FORM TITLE / HEADERS -------- */
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #064f60; /* Deep teal for headings */
+            text-transform: capitalize;
+            border-left: 4px solid #064f60;
+            padding-left: 0.75rem;
+        }
+        h4, h5, h6 {
+            color: #064f60;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* -------- MULTI-STEP FORM / PROGRESS BAR -------- */
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+            /* Subtle fade-in animation */
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(10px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .progress {
+            height: 0.75rem;
+            background-color: #d4e7eb;
+            border-radius: 0.375rem;
+        }
+        .progress-bar {
+            background: linear-gradient(to right, #064f60, #0c7072);
+            transition: width 0.4s ease;
+        }
+
+        /* -------- FORM ELEMENTS -------- */
+        .form-label {
+            font-weight: 500;
+            color: #333;
+        }
+        .form-control {
+            border: 1px solid #ccc;
+            border-radius: 0.375rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-control:focus {
+            border-color: #0c7072;
+            box-shadow: 0 0 0 0.2rem rgba(12, 112, 114, 0.25);
+        }
+        .input-group-text {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+        }
+
+        /* -------- BUTTONS -------- */
+        .btn-primary {
+            background-color: #064f60;
+            border: none;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0.6rem 1.2rem;
+        }
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: #0c7072;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(12, 112, 114, 0.25);
+        }
+        .btn-secondary {
+            background-color: #777;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0.6rem 1.2rem;
+        }
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background-color: #555;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(85, 85, 85, 0.25);
+        }
+        .btn-success {
+            background-color: #198754;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.6rem 1.2rem;
+        }
+        .btn-success:hover,
+        .btn-success:focus {
+            background-color: #157347;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(21, 115, 71, 0.25);
+        }
+
+        /* -------- TABLE & MISC STYLES -------- */
+        table.table {
+            background-color: #fff;
+        }
+        thead.thead-light {
+            background-color: #f1f5f6;
+        }
+        .border-box {
+            border: 1px dashed #0c7072;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+        }
+        .revenue-stamp,
+        .stamp-box {
+            border: 2px dotted #ccc;
+            width: 140px;
+            height: 60px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: 500;
+        }
+        .container {
+            width: 1370px !important;
+        }
     </style>
 </head>
 
 <body class="home page-template-default page page-id-2039 gdlr-core-body financity-body financity-body-front financity-full  financity-with-sticky-navigation gdlr-core-link-to-lightbox">
     <div class="container mt-5">
+        <!-- Progress Bar -->
         <div class="progress mb-4">
             <div class="progress-bar" role="progressbar" style="width: 0%;" id="progress-bar"></div>
         </div>
+
+        <!-- Multi-Step Form -->
         <form id="multiStepForm">
-            
-            <!-- Steps 1-12: Individual Forms -->
+            <!-- Step 1 -->
             <div class="step active">
                 <h4 class="form-title">Non-Discretionary Portfolio Account Opening Form</h4>
                 <div class="mb-3">
@@ -57,10 +214,12 @@
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
+                <!-- Original code had two Next buttons here -->
                 <button type="button" class="btn btn-primary next">Next</button>
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
-            
+
+            <!-- Step 2 -->
             <div class="step">
                 <h4>Step 2: Portfolio Account Opening Form</h4>
                 <div class="mb-3">
@@ -166,6 +325,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 3 -->
             <div class="step">
                 <h4>Step 3: KYC (Know Your Customer) Profile Form</h4>
                 <div class="row mb-3">
@@ -311,14 +471,14 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 4 -->
             <div class="step">
                 <h4>Step 4: Operational Instructions</h4>
                 <p class="text-center">The account will be operated as per instruction contained in the below Box:</p>
 
                 <div class="form-group">
                     <label>Principal Holder:</label>
-                    <input type="checkbox"> Jointly: <input type="checkbox"> Any one of the Account Holder: <input
-                        type="checkbox">
+                    <input type="checkbox"> Jointly: <input type="checkbox"> Any one of the Account Holder: <input type="checkbox">
                 </div>
 
                 <h5 class="font-weight-bold">PARTICULARS OF THE INTRODUCER</h5>
@@ -409,6 +569,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 5 -->
             <div class="step">
                 <h4>Step 5: Declaration Regarding Relationship with Public Limited Companies</h4>
                 <p>[I/We the undersigned declare that I/We have relationship with the following Public Limited Companies]</p>
@@ -495,14 +656,15 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 6 -->
             <div class="step">
                 <h4>Step 6: PLFS INVESTMENTS LIMITED</h4>
                 <h5 class="text-center">Signature Card</h5>
                 
                 <div class="form-group">
                     <label><input type="checkbox"> Individual Account</label>
-                    <label class="ml-3"><input type="checkbox"> Joint Account</label>
-                    <label class="ml-3"><input type="checkbox"> Corporate Account</label>
+                    <label class="ms-3"><input type="checkbox"> Joint Account</label>
+                    <label class="ms-3"><input type="checkbox"> Corporate Account</label>
                 </div>
                 
                 <div class="form-group row">
@@ -623,6 +785,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 7 -->
             <div class="step">
                 <h4>Step 7: Demand Promissory Note</h4>
                 
@@ -673,6 +836,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 8 -->
             <div class="step">
                 <h4>Step 8: Revival Letter</h4>
     
@@ -755,6 +919,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 9 -->
             <div class="step">
                 <h4>Step 9: Letter of Continuity</h4>
 
@@ -809,6 +974,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 10 -->
             <div class="step">
                 <h4>Step 10: INDEMNITY FOR ELECTRONIC INSTRUCTION</h4>
                 <div class="mb-3">
@@ -871,6 +1037,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 11 -->
             <div class="step">
                 <h4>Step 11: Customer Information</h4>
                 <p>This DEED OF AGREEMENT FOR PORTFOLIO MANAGEMENT is entered into at Dhaka on this Day of <input type="date" class="form-control d-inline w-auto"></p>
@@ -912,6 +1079,7 @@
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
+            <!-- Step 12 -->
             <div class="step">
                 <h4>Step 12: Final Consent</h4>
                 <h5 class="text-center bg-primary text-white p-2">JURISDICTION</h5>
@@ -989,12 +1157,11 @@
                     </div>
                 </div>
                 
-                
                 <button type="button" class="btn btn-secondary prev">Previous</button>
                 <button type="button" class="btn btn-primary next">Next</button>
             </div>
             
-            <!-- Step 13: Review & Submit -->
+            <!-- Step 13 (Review & Submit) -->
             <div class="step">
                 <h4>Step 13: Review & Submit</h4>
                 <p>Please review all details before submitting.</p>
@@ -1004,13 +1171,15 @@
         </form>
     </div>
 
+    <!-- Original JS references -->
     <script type='text/javascript' src='js/jquery/jquery.js'></script>
     <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
     <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
     <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
 
-
-    <!--[if lt IE 9]> <script type='text/javascript' src='https://demo.goodlayers.com/financity/wp-content/themes/financity/js/html5.js'></script> <![endif]-->    
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src='https://demo.goodlayers.com/financity/wp-content/themes/financity/js/html5.js'></script>
+    <![endif]-->    
 
     <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
     <script type='text/javascript' src='js/script-core.js'></script>
@@ -1022,195 +1191,43 @@
     <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
     <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
     <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>    
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        function revslider_showDoubleJqueryError(sliderID) {
-            var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-            errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-            errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-            errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-            errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-            jQuery(sliderID).show().html(errorMessage);
-        } /*]]>*/
-    </script>
-
-    <script>
-        /*<![CDATA[*/
-        var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-        var htmlDivCss = "";
-        if (htmlDiv) {
-            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-        } else {
-            var htmlDiv = document.createElement("div");
-            htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-            document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-        } /*]]>*/
-    </script>
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        var setREVStartSize = function() {
-            try {
-                var e = new Object,
-                    i = jQuery(window).width(),
-                    t = 9999,
-                    r = 0,
-                    n = 0,
-                    l = 0,
-                    f = 0,
-                    s = 0,
-                    h = 0;
-                e.c = jQuery('#rev_slider_1_1');
-                e.gridwidth = [1300];
-                e.gridheight = [810];
-                e.sliderLayout = "auto";
-                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
-                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
-                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
-                    var u = (e.c.width(), jQuery(window).height());
-                    if (void 0 != e.fullScreenOffsetContainer) {
-                        var c = e.fullScreenOffsetContainer.split(",");
-                        if (c) jQuery.each(c, function(e, i) {
-                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
-                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
-                    }
-                    f = u
-                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
-                e.c.closest(".rev_slider_wrapper").css({
-                    height: f
-                })
-            } catch (d) {
-                console.log("Failure at Presize of Slider:" + d)
-            }
-        };
-        setREVStartSize();
-        var tpj = jQuery;
-        var revapi1;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_1_1").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_1_1");
-            } else {
-                revapi1 = tpj("#rev_slider_1_1").show().revolution({
-                    sliderType: "standard",
-                    jsFileLocation: "//demo.goodlayers.com/financity/wp-content/plugins/revslider/public/assets/js/",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    navigation: {
-                        keyboardNavigation: "off",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        mouseScrollReverse: "default",
-                        onHoverStop: "off",
-                        arrows: {
-                            style: "uranus",
-                            enable: true,
-                            hide_onmobile: false,
-                            hide_onleave: true,
-                            hide_delay: 200,
-                            hide_delay_mobile: 1200,
-                            tmp: '',
-                            left: {
-                                h_align: "left",
-                                v_align: "center",
-                                h_offset: 20,
-                                v_offset: 0
-                            },
-                            right: {
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 20,
-                                v_offset: 0
-                            }
-                        },
-                        bullets: {
-                            enable: true,
-                            hide_onmobile: false,
-                            style: "uranus",
-                            hide_onleave: false,
-                            direction: "horizontal",
-                            h_align: "center",
-                            v_align: "bottom",
-                            h_offset: 0,
-                            v_offset: 30,
-                            space: 10,
-                            tmp: '<span class="tp-bullet-inner"></span>'
-                        }
-                    },
-                    visibilityLevels: [1240, 1024, 778, 480],
-                    gridwidth: 1300,
-                    gridheight: 810,
-                    lazyType: "none",
-                    parallax: {
-                        type: "mouse",
-                        origo: "enterpoint",
-                        speed: 400,
-                        levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
-                    },
-                    shadow: 0,
-                    spinner: "off",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    disableProgressBar: "on",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: false,
-                    }
-                });
-            }
-        }); /*]]>*/
-    </script>
-    <script>
-        /*<![CDATA[*/
-        var htmlDivCss = unescape("%23rev_slider_1_1%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_1_1%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_1_1%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C%200%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20background-color%3A%20rgba%28255%2C%20255%2C%20255%2C%200.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A");
-        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-        if (htmlDiv) {
-            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-        } else {
-            var htmlDiv = document.createElement('div');
-            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-        } /*]]>*/
-    </script>
-
+    
+    <!-- Multi-Step Form Logic -->
     <script>
         $(document).ready(function () {
             let currentStep = 0;
             let steps = $(".step");
             let progressBar = $("#progress-bar");
-            
+
             function updateProgressBar() {
                 let percent = ((currentStep + 1) / steps.length) * 100;
                 progressBar.css("width", percent + "%");
             }
-            
+
             $(".next").click(function () {
-                steps.eq(currentStep).removeClass("active");
-                currentStep++;
-                steps.eq(currentStep).addClass("active");
-                updateProgressBar();
+                if (currentStep < steps.length - 1) {
+                    steps.eq(currentStep).removeClass("active");
+                    currentStep++;
+                    steps.eq(currentStep).addClass("active");
+                    updateProgressBar();
+                }
             });
-            
+
             $(".prev").click(function () {
-                steps.eq(currentStep).removeClass("active");
-                currentStep--;
-                steps.eq(currentStep).addClass("active");
-                updateProgressBar();
+                if (currentStep > 0) {
+                    steps.eq(currentStep).removeClass("active");
+                    currentStep--;
+                    steps.eq(currentStep).addClass("active");
+                    updateProgressBar();
+                }
             });
-            
+
             $("#multiStepForm").submit(function (e) {
                 e.preventDefault();
                 alert("Form submitted successfully!");
             });
-            
+
+            // Initialize progress bar
             updateProgressBar();
         });
     </script>
