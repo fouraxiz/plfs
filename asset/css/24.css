@@ -207,12 +207,14 @@
     --padding-bottom: 120px;
     --padding-left: 0px;
     --padding-right: 0px;
+    filter: hue-rotate(205deg);
+
 }
 
 .elementor-8 .elementor-element.elementor-element-8d94dc8:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-8d94dc8>.elementor-motion-effects-container>.elementor-motion-effects-layer {
     background-color: #F5F4F4;
-    background-image: url("https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/09/shape-2-1.png");
+    background-image: url("../uploads/2024/09/shape-2-1.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -505,10 +507,12 @@
 .elementor-8 .elementor-element.elementor-element-de60b9b>.e-con-inner>.elementor-background-slideshow::before,
 .elementor-8 .elementor-element.elementor-element-de60b9b>.elementor-motion-effects-container>.elementor-motion-effects-layer::before {
     background-color: #550401;
-    background-image: url("https://july.finestwp.com/newwp/flexibank/wp-content/uploads/2024/10/shape-4-1.png");
+    background-image: url("../uploads/2024/10/shape-4-1.png");
     --background-overlay: '';
     background-position: top right;
     background-repeat: no-repeat;
+    filter: hue-rotate(205deg);
+
 }
 
 .elementor-8 .elementor-element.elementor-element-d24ec13 .te-box-title {

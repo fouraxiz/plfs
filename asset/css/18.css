@@ -64,9 +64,6 @@
 
 
 @media only screen and (max-width: 1599px) {
-    .main-header .menu-right-content .btn-box {
-        display: none;
-    }
 
     .apps-section .image-layer {
         display: none;
